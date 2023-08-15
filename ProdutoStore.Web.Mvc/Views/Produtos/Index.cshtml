@@ -1,0 +1,27 @@
+﻿@model API.Application.ViewModels.ProdutosVM
+
+<table id="produtos" class="table table-bordered table-hover">
+    <thead>
+        <tr class="">
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Categoria</th>
+            <th>Ativo</th>
+            <th>Perecível</th>
+            <th>Ação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model.Produtos)
+        {
+            <tr style="height: 60px;">
+                <td>@produto.nome</td>
+                <td>@produto.descricao</td>
+                <td>@produto.categoriaProduto.nome</td>
+                <td>@produto.ativo</td>
+                <td>@produto.perecivel</td>
+                <td></td>
+            </tr>
+        }
+    </tbody>
+</table>

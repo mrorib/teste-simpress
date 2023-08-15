@@ -8,15 +8,15 @@ using System;
 
 namespace ProdutoStore.Web.Mvc.Controllers
 {
-    [ApiController]
+    [Controller]
     [Route("[controller]")]
-    public class ProdutoController : Controller
+    public class ProdutosController : Controller
     {
         private IProdutoService _produtoService;
         private IValidator<ProdutoVM> _validatorProduto;
         private IValidator<CreateProdutoVM> _validatorCreateProduto;
 
-        public ProdutoController(IProdutoService produtoService, IValidator<ProdutoVM> validatorProduto, IValidator<CreateProdutoVM> validatorCreateProduto)
+        public ProdutosController(IProdutoService produtoService, IValidator<ProdutoVM> validatorProduto, IValidator<CreateProdutoVM> validatorCreateProduto)
         {
             _produtoService = produtoService;
             _validatorProduto = validatorProduto;
